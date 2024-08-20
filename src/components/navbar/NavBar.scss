@@ -1,0 +1,136 @@
+@import '../../assets/style/vars.scss';
+
+.navbar-out-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $real-blue-color;
+
+    .navbar-logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $real-blue-color;
+
+        .pi-align-justify {
+            display: none;
+        }
+
+        .navbar-logo {
+            width: 200px;
+            height: 150px;
+        }
+
+        .navbar-facebook {
+            position: absolute;
+            right: 40px;
+            font-size: 30px;
+            color: #B17E47;
+        }
+
+        .navbar-instagram {
+            position: absolute;
+            right: 0;
+            font-size: 30px;
+            color: #B17E47;
+        }
+    }
+
+    .navbar-details-container {
+        display: flex;
+        gap: 50px;
+        background-color: $logo-color;
+        color: whitesmoke;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        padding-right: 0px !important;
+        padding-left: 0;
+        overflow: hidden;
+        margin: 0;
+        margin-top: 5px;
+
+        li {
+            text-decoration: none;
+            list-style-type: none;
+            color: whitesmoke;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+            a {
+                color: whitesmoke;
+                text-decoration: none;
+
+                &:hover {
+                    font-weight: bold;
+                }
+
+                &:active::after {
+                    color: black;
+                }
+
+                
+            }
+            a.link.visited{
+                color: $real-blue-color ;
+                font-weight: 1000;
+            }
+
+
+        }
+
+    }
+}
+
+@media (max-width:$mobile-bp) {
+    .navbar-out-container {
+        .navbar-logo-container {
+            padding-bottom: 20px;
+
+            .pi-align-justify {
+                display: flex;
+                position: absolute;
+                color: $logo-color;
+                left: 10px;
+                font-size: 25px;
+            }
+        }
+
+        .navbar-details-container {
+            display: none;
+            height: 0;
+            // z-index: 10000 !important;
+            transform: translateY(0);
+            justify-content: center;
+            align-items: center;
+            // background-color: rgba(194, 35, 35, 0.1);
+            background-color: $logo-color;
+            /* Fallback for non-supporting browsers */
+            -webkit-backdrop-filter: blur(10px);
+            /* For Safari */
+            backdrop-filter: blur(40px);
+            transition: all 0.5s ease;
+
+            li {
+                a {
+                    color: white;
+                    font-weight: 400;
+                }
+            }
+        }
+        
+
+        .navbar-details-container.active {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0;
+            height: 40vh;
+            transition: all 0.5s ease;
+
+        }
+    }
+}

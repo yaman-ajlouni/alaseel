@@ -1,0 +1,61 @@
+@import "../../assets/style/vars.scss";
+
+.Logos {
+  overflow: hidden;
+  padding: 10px 0;
+  background-color: whitesmoke;
+  white-space: nowrap;
+  position: relative;
+}
+
+.Logos::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    content: "";
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 10%,
+      $logo-color 200%
+    );
+  }
+
+.Logos::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    content: "";
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 10%,
+      $logo-color 200%
+    );
+  }
+
+.Logos_slide {
+  display: inline-block;
+  white-space: nowrap;
+  background-color: transparent;
+  animation: slider 30s linear infinite;
+}
+
+.Logos_slide img {
+  height: 80px;
+  margin: 0 130px;
+  background-color: transparent;
+}
+
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
