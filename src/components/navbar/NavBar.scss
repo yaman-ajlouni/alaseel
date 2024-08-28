@@ -21,21 +21,7 @@
 
         .navbar-logo {
             width: 200px;
-            height: 150px;
-        }
-
-        .navbar-facebook {
-            position: absolute;
-            right: 40px;
-            font-size: 30px;
-            color: #B17E47;
-        }
-
-        .navbar-instagram {
-            position: absolute;
-            right: 0;
-            font-size: 30px;
-            color: #B17E47;
+            height: 100%;
         }
     }
 
@@ -54,33 +40,34 @@
         margin: 0;
         margin-top: 5px;
 
-        li {
+        a {
             text-decoration: none;
             list-style-type: none;
             color: whitesmoke;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            
-            a {
-                color: whitesmoke;
-                text-decoration: none;
+            font-family: "Rubik", sans-serif;
 
-                &:hover {
-                    font-weight: bold;
-                }
 
-                &:active::after {
-                    color: black;
-                }
+            color: whitesmoke;
+            text-decoration: none;
 
-                
+            &:hover {
+                font-weight: bold;
             }
-            a.link.visited{
-                color: $real-blue-color ;
-                font-weight: 1000;
+
+            &:active::after {
+                color: black;
             }
 
 
         }
+
+        a.link.visited {
+            color: $real-blue-color ;
+            font-weight: 1000;
+        }
+
+
+
 
     }
 }
@@ -88,49 +75,50 @@
 @media (max-width:$mobile-bp) {
     .navbar-out-container {
         .navbar-logo-container {
-            padding-bottom: 20px;
-
             .pi-align-justify {
                 display: flex;
                 position: absolute;
-                color: $logo-color;
+                color: $secondary-color;
                 left: 10px;
                 font-size: 25px;
             }
         }
 
         .navbar-details-container {
-            display: none;
+            visibility: hidden; // Initially hidden
             height: 0;
-            // z-index: 10000 !important;
-            transform: translateY(0);
+            opacity: 0;
+            transform: translateY(-20px);
+            padding: 0;
             justify-content: center;
             align-items: center;
-            // background-color: rgba(194, 35, 35, 0.1);
             background-color: $logo-color;
-            /* Fallback for non-supporting browsers */
             -webkit-backdrop-filter: blur(10px);
-            /* For Safari */
             backdrop-filter: blur(40px);
-            transition: all 0.5s ease;
+            transition: height 0.6s ease, opacity 0.6s ease, transform 0.6s ease, visibility 0s linear 0s; // Delay visibility
+            width: 100%;
 
-            li {
+
                 a {
                     color: white;
                     font-weight: 400;
+                    font-size: 20px;
                 }
-            }
+
         }
-        
+
 
         .navbar-details-container.active {
+            visibility: visible; // Become visible immediately
             display: flex;
             flex-direction: column;
             gap: 30px;
             margin: 0;
-            height: 40vh;
-            transition: all 0.5s ease;
-
+            height: 35vh;
+            opacity: 1;
+            transform: translateY(0);
+            padding: 0;
+            transition: height 0.6s ease, opacity 0.6s ease, transform 0.6s ease, visibility 0s; // Remove delay when active
         }
     }
 }

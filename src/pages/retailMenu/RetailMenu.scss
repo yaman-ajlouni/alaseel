@@ -1,0 +1,145 @@
+@import '../../assets/style/vars.scss';
+
+
+.retail-menu-out-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .retail-menu-top-container {
+        margin-top: 30px;
+
+        .retail-menu-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-family: "Rubik", sans-serif;
+            gap: 8px;
+
+            div {
+                font-weight: bold;
+            }
+
+            i {
+                font-size: 25px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .retail-menu-bottom-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 7px;
+
+        .retail-menu-food-container {
+            flex: 1;
+            padding: 20px 50px;
+            display: flex;
+            background-color: $logo-color;
+            border-radius: 10px;
+            text-decoration: none;
+
+            .retail-menu-food-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                width: 80px;
+            }
+
+            a {
+                margin-left: 30px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 27px;
+                font-family: "Rubik", sans-serif;
+            }
+
+        }
+
+        .retail-menu-sweets-container {
+            flex: 1;
+            padding: 20px 50px;
+            display: flex;
+            background-color: $logo-color;
+            border-radius: 10px;
+            text-decoration: none;
+
+
+
+            img {
+                width: 80px;
+                color: wheat;
+            }
+
+            a {
+                margin-left: 30px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 27px;
+                font-family: "Rubik", sans-serif;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-bp) {
+    .retail-menu-out-container {
+        .retail-menu-top-container {
+            .retail-menu-title {
+
+                i {
+                    font-size: 17px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .retail-menu-bottom-container {
+            display: flex;
+            flex-direction: column;
+
+            .retail-menu-food-container {
+
+                width: 80%;
+
+                img {
+                    height: 70px;
+                    width: 70px;
+                }
+
+
+                a {
+                    font-size: 18px;
+                }
+            }
+
+            .retail-menu-sweets-container{
+                width: 80%;
+
+                img{
+                    height: 70px;
+                    width: 70px;
+                }
+
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

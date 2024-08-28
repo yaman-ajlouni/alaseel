@@ -27,7 +27,7 @@ export const ContactUs = () => {
                     </div>
                     <div className='contact-touch-second'>
                         <div>info@alaseelsweets.com</div>
-                        <div>0959364681</div>
+                        <div>+963 94 4236661</div>
                     </div>
                 </div>
                 {/* <div className='contact-third-container'>

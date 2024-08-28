@@ -1,0 +1,62 @@
+@import '../../../assets/style/vars.scss';
+
+.home-details-out-container{
+    padding: 0 350px;
+    padding-bottom: 80px;
+    
+    .home-details-top-container{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        img{
+            width: 300px;
+            height: 80px;
+            margin-right: 15px;
+        }
+
+        div{
+            font-weight: 400;
+            color: $logo-color;
+            letter-spacing: 10px;
+
+        }
+    }
+    .home-details-bottom-container{
+        font-size: 23px;
+        color: $logo-color;
+        font-family: "Rubik", sans-serif;
+        letter-spacing: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
+}
+
+@media (max-width: $mobile-bp){
+    .home-details-out-container{
+        padding: 0;
+        padding-left: 15px;
+        padding-right: 10px;
+        // padding-bottom: 80px;
+        .home-details-top-container{
+            img{
+                width: 150px;
+                margin-right: 2px;
+                height: 50px;
+            }
+            div{
+                font-size: 13px;
+                letter-spacing: 5px;
+            }
+
+        }
+        .home-details-bottom-container{
+            font-size: 15px;
+            margin-top: 8px;
+            letter-spacing: 0;
+            padding-bottom: 50px;
+        }
+    }
+}

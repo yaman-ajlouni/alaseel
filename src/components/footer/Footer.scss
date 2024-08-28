@@ -1,67 +1,105 @@
 @import '../../assets/style/vars.scss';
 
-.footer-out-container{
+.footer-out-container {
     width: 100%;
     background-color: $logo-color;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
+    gap: 20px;
     align-items: center;
 
 
-    .footer-top-container{
+
+    .footer-top-container {
         padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        // margin-left: 500px;
+        // border-right: 1px dashed #f7f7f7;
+        margin-left: 50px;
 
-        .footer-logo{
-            width: 120px;
+        .footer-logo {
+            width: 90px;
         }
-        .footer-social-container{
+
+        .footer-social-container {
             display: flex;
             text-align: center;
             margin-top: 20px;
             color: white;
             gap: 10px;
 
-            a{
+            a {
                 text-decoration: none;
                 color: white;
 
-                &:visited{
+                &:visited {
                     color: white;
                 }
             }
 
-            .pi-facebook{
+            .pi-facebook {
                 cursor: pointer;
             }
 
-            .pi-instagram{
+            .pi-instagram {
                 cursor: pointer;
             }
         }
     }
 
-    .footer-bottom-container{
-        border-top: 1px solid #f7f7f7;
-        width: 100%;
+    .footer-bottom-container {
+        // width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
-        padding: 10px 0;
+        // padding: 10px ;
+        margin-left: 10px;
+        gap: 10px;
         color: #f7f7f7;
         font-weight: 500;
+        padding: 10px 0;
         font-size: 15px;
 
-        .footer-copy-right{
-            text-align: center;
+        .footer-produced-by {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            font-family: "Rubik", sans-serif;
+            text-align: left;
+            position: relative;
+            // border-bottom: 1px dashed #f7f7f7;
+
         }
 
-        .footer-powered-by{
-            text-align: center;
+        .footer-details-container {
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            gap: 2px;
+            display: flex;
+            flex-direction: column;
 
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-out-container{
+        .footer-top-container{
+            margin-left: 10px;
+
+        }
+        .footer-bottom-container{
+            font-size: 12px;
+            padding: 3px 0 ;
+            gap: 20px;
+
+            .footer-details-container{
+                gap: 10px;
+            }
         }
     }
 }

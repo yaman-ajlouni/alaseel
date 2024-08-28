@@ -19,7 +19,7 @@ export const NavBar = () => {
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (navRef.current && !navRef.current.contains(event.target)) {
+            if (navRef.current && !navRef.current.contains(event.target) && !event.target.closest('.pi-align-justify')) {
                 setShowMenu(false);
             }
         };
@@ -48,39 +48,29 @@ export const NavBar = () => {
         <div className='navbar-out-container' >
             <div className='navbar-logo-container'>
                 <div className='pi pi-align-justify' onClick={toggleMenu}></div>
-                <img className='navbar-logo' src={require('../../assets/images/main-logo.png')} alt="" />
+                <img className='navbar-logo' src={require('../../assets/images/mix-logo.png')} alt="" />
                 {/* <div className='pi pi-facebook navbar-facebook'></div>
                 <div className='pi pi-instagram navbar-instagram'></div> */}
             </div>
             <ul ref={navRef} className={`navbar-details-container ${showMenu ? 'active' : ""} `}>
-                <li>
-                    <Link to='/' className={` link ${localStorage.getItem('tab') === "" ? 'visited' : '' }`}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to='/About' className={` link ${localStorage.getItem('tab') === "About" ? 'visited' : '' }`}>
-                        About
-                    </Link></li>
-                <li>
-                    <Link to='/Retail' className={` link ${localStorage.getItem('tab') === "Retail" ? 'visited' : '' }`}>
-                        Retail
-                    </Link></li>
-                <li>
-                    <Link to='Catering' className={` link ${localStorage.getItem('tab') === "Catering" ? 'visited' : '' }`}>
-                        Catering
-                    </Link>
-                </li>
-                <li>
-                    <Link to='Consultancy' className={` link ${localStorage.getItem('tab') === "Consultancy" ? 'visited' : '' }`}>
-                        Consultancy
-                    </Link>
-                </li>
-                <li>
-                    <Link to='Contact' className={` link ${localStorage.getItem('tab') === "Contact" ? 'visited' : '' }`}>
-                        Contact
-                    </Link>
-                </li>
+            <Link to='/' className={` link ${localStorage.getItem('tab') === "" ? 'visited' : ''}`}>
+                    Home
+                </Link>
+                <Link to='/About' className={` link ${localStorage.getItem('tab') === "About" ? 'visited' : ''}`}>
+                    About
+                </Link>
+                <Link to='/Retail' className={` link ${localStorage.getItem('tab') === "Retail" ? 'visited' : ''}`}>
+                    Menu
+                </Link>
+                <Link to='/Catering' className={` link ${localStorage.getItem('tab') === "Catering" ? 'visited' : ''}`}>
+                    Catering
+                </Link>
+                {/* <Link to='/Consultancy' className={` link ${localStorage.getItem('tab') === "Consultancy" ? 'visited' : ''}`}>
+                    Consultancy
+                </Link> */}
+                <Link to='/Contact' className={` link ${localStorage.getItem('tab') === "Contact" ? 'visited' : ''}`}>
+                    Contact
+                </Link>
 
             </ul>
         </div>

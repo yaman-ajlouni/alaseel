@@ -1,0 +1,184 @@
+@import '../../assets/style/vars.scss';
+
+.home-navbar-out-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+    overflow-x: hidden; // Ensure no horizontal overflow
+    box-sizing: border-box;
+
+    &.scrolled {
+        background-color: whitesmoke;
+        position: fixed;
+        top: 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        z-index: 2;
+
+
+        .home-navbar-logo-container {
+            margin-left: 40px;
+
+            .home-navbar-logo {
+                width: 150px;
+                height: 105px;
+            }
+        }
+
+        .home-navbar-details-container {
+            a {
+                color: black;
+            }
+
+            a.link.visited {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+
+    .home-navbar-logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        margin-left: 70px;
+        align-items: center;
+        flex: 1;
+        transition: all 0.5s ease;
+
+        .pi-align-justify {
+            display: none;
+        }
+
+        .home-navbar-logo {
+            width: 200px;
+            height: 150px;
+            transition: all 0.5s ease;
+        }
+    }
+
+    .home-navbar-details-container {
+        display: flex;
+        gap: 50px;
+        color: whitesmoke;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        overflow: hidden;
+        align-items: center;
+        margin: 0;
+        margin-top: 5px;
+        flex: 2;
+        transition: all 0.5s ease;
+
+        &.scrolled {
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            list-style-type: none;
+            color: whitesmoke;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-family: "Rubik", sans-serif;
+            transition: all 0.5s ease;
+            font-weight: 500;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+        a.link.visited {
+            border-bottom: 1px solid white;
+        }
+    }
+}
+
+@media (max-width:$mobile-bp) {
+    .home-navbar-out-container {
+        background-color: whitesmoke;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 100vw !important;
+        overflow: hidden;
+
+        &.scrolled {
+            padding: 0;
+        }
+
+        .home-navbar-logo-container {
+            // padding-bottom: 20px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            width: 100vw !important;
+            margin-left: 0 !important;
+            overflow: hidden;
+
+            .home-navbar-logo {
+                height: 120px;
+                width: 160px;
+                margin-left: 10px;
+                max-width: 100%; // Ensure the logo does not exceed the container's width
+
+            }
+
+            .pi-align-justify {
+                display: flex;
+                position: absolute;
+                color: $logo-color;
+                right: 30px;
+                font-size: 25px;
+            }
+        }
+
+        .home-navbar-details-container {
+            visibility: hidden; // Initially hidden
+            height: 0;
+            opacity: 0;
+            transform: translateY(-20px);
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: $logo-color;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(40px);
+            transition: height 0.6s ease, opacity 0.6s ease, transform 0.6s ease, visibility 0s linear 0s; // Delay visibility
+            width: 100%;
+            overflow: hidden;
+
+                a {
+                    color: white !important;
+                    font-weight: 400;
+                    transition: all 1s ease-in;
+
+                }
+                a.link.visited {
+                    border-bottom: 1px solid white !important;
+                }
+            
+        }
+
+        .home-navbar-details-container.active {
+            visibility: visible; // Become visible immediately
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0;
+            height: 40vh;
+            opacity: 1;
+            transform: translateY(0);
+            padding: 30px 0;
+            transition: height 0.6s ease, opacity 0.6s ease, transform 0.6s ease, visibility 0s; // Remove delay when active
+        }
+    }
+}

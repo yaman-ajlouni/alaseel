@@ -1,0 +1,106 @@
+@import '../../../assets/style/vars.scss';
+
+.home-about-out-container {
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 30px 60px 20px;
+    margin-bottom: 30px;
+    background-color: $real-blue-color;
+
+    .home-about-left-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .home-about-journey-title {
+            width: 100%;
+            text-align: center;
+            color: $secondary-color;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+
+        .home-about-journey-details {
+            text-align: center;
+            color: $secondary-color;
+            font-weight: 500;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    }
+
+    .home-about-right-container {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        background-image: url('../../../assets/images/theLuxury-second-color.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1420px) {
+    .home-about-out-container {
+        display: flex;
+        flex-direction: column;
+        height: 840px;
+        padding: 0;
+
+        .home-about-left-container {
+            margin-top: 30px;
+            gap: 30px;
+            padding: 0 20px;
+
+            .home-about-journey-title {
+                color: $secondary-color;
+                position: relative;
+
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    width: 15%;
+                    height: 1.5px;
+                    background-color: #ccc;
+                }
+
+                &::before {
+                    left: 0;
+                    margin-right: 10px; /* Space between line and text */
+                }
+    
+                &::after {
+                    right: 0;
+                    margin-left: 10px; /* Space between line and text */
+                }
+            }
+
+            .home-about-journey-details {
+                color: $secondary-color;
+                padding: 0 10px;
+            }
+        }
+
+        .home-about-right-container {
+            // background-image: url('../../../assets/images/aseel-background-home-cutted.jpg');
+            background-position: top;
+            margin: 0;
+            background-size: contain;
+            height: 50vh;
+            
+        }
+    }
+}

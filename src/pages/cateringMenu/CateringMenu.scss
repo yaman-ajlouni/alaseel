@@ -1,0 +1,106 @@
+@import '../../assets/style/vars.scss';
+
+.catering-menu-out-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .catering-menu-title-container {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+
+        h2{
+            font-size: 40px;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+        i{
+            font-size: 20px;
+            font-family: "Rubik", sans-serif;
+
+        }
+    }
+
+    .catering-menu-card-out-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 20px 280px;
+        padding-bottom: 50px;
+
+        .catering-menu-card-container {
+
+            .catering-menu-card-title {
+                font-family: "Rubik", sans-serif;
+                text-align: center;
+                font-size: 22px;
+            }
+        
+        
+        }
+    }
+}
+
+
+@media (max-width: $mobile-bp) {
+    .catering-menu-out-container {
+        // height: 50vh;
+        display: flex;
+        flex-direction: column;
+
+        .catering-menu-title-container {
+            text-align: center;
+            padding: 50px 0 20px 0;
+            font-size: 30px;
+
+            h2 {
+                margin: 0;
+                margin-bottom: 5px;
+                font-family: "Rubik", sans-serif;
+
+            }
+
+            i {
+                font-size: 17px;
+                font-family: "Rubik", sans-serif;
+
+            }
+        }
+
+        .catering-menu-card-out-container {
+            text-align: center;
+            // height: 50vh;
+            padding: 0 0 50px 0;
+            display: flex;
+            // align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .catering-menu-card-container {
+                height: 190px;
+                width: 160px;
+
+                .catering-menu-card-image {
+
+                    img {
+                        width: 160px;
+                        height: 160px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                .catering-menu-card-title {
+                    font-family: "Rubik", sans-serif;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

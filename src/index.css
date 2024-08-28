@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7f7f7;
   scrollbar-color: red !important;
+  overflow-x: hidden !important;
+  outline: 1px solid red;
+
+
 }
 
 code {
@@ -17,5 +21,8 @@ code {
 html {
   scrollbar-color: red !important;
   scrollbar-arrow-color: aquamarine;
-  scrollbar-width: 50px;
+  /* scrollbar-width: 50px; */
+  /* width: 50vh; */
+  /* width: 160vh !important; */
+
 }
