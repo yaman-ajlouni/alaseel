@@ -7,17 +7,20 @@
   align-items: center;
   justify-content: center;
   padding: 30px 0;
+  background-color: $real-blue-color;
+  
 }
 
 .form-container {
   width: 90%;
-  background: linear-gradient(#212121, #212121) padding-box,
-              linear-gradient(155deg, $logo-color 50%,$logo-color) border-box;
-  border: 2px solid $logo-color;
+  background-color: $real-blue-color;
+  // background: linear-gradient(#212121, #212121) padding-box,
+              // linear-gradient(155deg, $logo-color 50%,$logo-color) border-box;
+  // border: 2px solid $logo-color;
   padding: 32px 24px;
   font-size: 14px;
   font-family: inherit;
-  color: white;
+  color: $secondary-color;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -60,7 +63,7 @@
 .form-container .form-group label {
   display: block;
   margin-bottom: 5px;
-  color: $logo-color;
+  color: $secondary-color;
   font-weight: 600;
   font-size: 12px;
 }
@@ -69,10 +72,10 @@
   width: 90%;
   padding: 12px 16px;
   border-radius: 8px;
-  color: #fff;
+  color: $secondary-color;
   font-family: inherit;
   background-color: transparent;
-  border: 1px solid #414141;
+  border: 1px solid $secondary-color;
 }
 
 .form-container .form-group textarea {
@@ -80,9 +83,9 @@
   padding: 12px 16px;
   border-radius: 8px;
   resize: none;
-  color: #fff;
+  color: $secondary-color;
   height: 96px;
-  border: 1px solid #414141;
+  border: 1px solid $secondary-color;
   background-color: transparent;
   font-family: inherit;
 }
@@ -93,12 +96,12 @@
 
 .form-container .form-group input:focus {
   outline: none;
-  border-color: $logo-color;
+  border-color: $secondary-color;
 }
 
 .form-container .form-group textarea:focus {
   outline: none;
-  border-color: $logo-color;
+  border-color: $secondary-color;
 }
 
 .form-container .form-submit-btn {
@@ -107,11 +110,11 @@
   justify-content: center;
   align-self: flex-start;
   font-family: inherit;
-  color: $logo-color;
+  color: $real-blue-color;
   font-weight: 600;
   width: 40%;
-  background: #313131;
-  border: 1px solid #414141;
+  background: $secondary-color;
+  border: 1px solid $secondary-color;
   padding: 12px 16px;
   font-size: inherit;
   gap: 8px;

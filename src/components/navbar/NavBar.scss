@@ -45,6 +45,7 @@
             list-style-type: none;
             color: whitesmoke;
             font-family: "Rubik", sans-serif;
+            align-content: center;
 
 
             color: whitesmoke;
@@ -75,11 +76,12 @@
 @media (max-width:$mobile-bp) {
     .navbar-out-container {
         .navbar-logo-container {
+            justify-content: start;
             .pi-align-justify {
                 display: flex;
                 position: absolute;
                 color: $secondary-color;
-                left: 10px;
+                right: 10px;
                 font-size: 25px;
             }
         }

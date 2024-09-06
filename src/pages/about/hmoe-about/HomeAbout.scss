@@ -9,8 +9,11 @@
     align-items: center;
     position: relative;
     padding: 30px 60px 20px;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
     margin-bottom: 30px;
     background-color: $real-blue-color;
+
 
     .home-about-left-container {
         flex: 1;
@@ -19,6 +22,9 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+        padding: 0 50px !important ;
+        background-color: $real-blue-color;
+
 
         .home-about-journey-title {
             width: 100%;
@@ -47,6 +53,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin-left: 40px;
+        background-color: $real-blue-color;
+
     }
 }
 
@@ -56,11 +64,13 @@
         flex-direction: column;
         height: 840px;
         padding: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
         .home-about-left-container {
             margin-top: 30px;
             gap: 30px;
-            padding: 0 20px;
+            padding: 30px 20px !important;
 
             .home-about-journey-title {
                 color: $secondary-color;

@@ -15,9 +15,9 @@ export const Story = () => {
                     discover what makes us different.
                 </p>
             </div>
-            {/* <div className='story-right-container'> */}
-                <img src={require('../../../assets/images/about-alaseel-background.jpg')}  alt="Company Image" />
-            {/* </div> */}
+            <div className='story-right-container'>
+                <img src={require('../../../assets/images/sweetLuxury-main-logo.png')}  alt="Company Image" />
+            </div>
         </div>
     );
 }

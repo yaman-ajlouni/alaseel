@@ -24,7 +24,7 @@ export const Footer = () => {
                     <div>Damascus - Syria</div>
                     <div>TEL: +963 11 224 7760 - FAX: +963 11 2223399</div>
                     <div>MOB: +963 94 4236661 - E-MAIL: info@alaseelsweets.com</div>
-                    <i>POWERED BY YAMAN AJLOUNI</i>
+                    <b>POWERED BY <a href="https://www.instagram.com/yaman_ajlouni/" target="_blank" rel="noopener noreferrer" >YAMAN AJLOUNI</a></b>
                 </div>
 
             </div>

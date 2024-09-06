@@ -2,7 +2,7 @@
 
 .about-value-out-container {
     padding: 60px 40px;
-    background-color: $secondary-color;
+    background-color: $real-blue-color;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -16,15 +16,15 @@
     .about-value-main-container {
         text-align: center;
         padding: 20px;
-        background-color: lighten($secondary-color, 10%);
+        background-color: lighten($real-blue-color, 0%);
         border-radius: 10px;
 
         .about-value-main-title {
             font-size: 36px;
             font-weight: 700;
-            color: $real-blue-color;
+            color: $secondary-color;
             margin-bottom: 20px;
-            border-bottom: 3px solid lighten($real-blue-color, 20%);
+            border-bottom: 3px solid lighten($secondary-color, 20%);
             padding-bottom: 10px;
             text-transform: uppercase;
         }
@@ -32,7 +32,7 @@
         .about-value-main-details {
             font-size: 20px;
             font-weight: 500;
-            color: $real-blue-color;
+            color: $secondary-color;
             line-height: 1.6;
             max-width: 900px;
             margin: 0 auto;
@@ -45,7 +45,7 @@
         gap: 30px;
 
         .value-item-container {
-            background-color: lighten($secondary-color, 15%);
+            background-color: lighten($real-blue-color, 0%);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -54,15 +54,15 @@
             .value-title {
                 font-size: 24px;
                 font-weight: 600;
-                color: $real-blue-color;
+                color: $secondary-color;
                 margin-bottom: 10px;
                 text-transform: uppercase;
-                border-bottom: 2px solid lighten($real-blue-color, 20%);
+                border-bottom: 2px solid lighten($secondary-color, 20%);
                 padding-bottom: 10px;
                 position: relative;
 
                 &:hover {
-                    color: darken($real-blue-color, 10%);
+                    color: darken($secondary-color, 10%);
                 }
 
                 &::after {
@@ -74,14 +74,14 @@
                     right: 0;
                     top: 50%;
                     transform: translateY(-50%);
-                    color: darken($real-blue-color, 20%);
+                    color: darken($secondary-color, 20%);
                 }
             }
 
             .value-details {
                 font-size: 18px;
                 font-weight: 400;
-                color: $real-blue-color;
+                color: $secondary-color;
                 line-height: 1.5;
                 margin-top: 20px;
                 // display: none;

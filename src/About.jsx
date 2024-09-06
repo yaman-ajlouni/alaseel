@@ -16,8 +16,9 @@ export const About = () => {
 
     return (
         <div className='about-container'>
-            {/* <WhiteNavBar />` */}
-            <NavBar />
+            <WhiteNavBar />`
+            {/* <NavBar /> */}
+
             <Story />
             <HomeAbout />
             <AboutVision />
