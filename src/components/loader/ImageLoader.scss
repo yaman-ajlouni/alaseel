@@ -1,0 +1,45 @@
+@import '../../assets/style/vars.scss';
+
+.image-loader-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(240, 240, 240, 0.5); // Adjust color to match your design
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1); // Light color for the spinner
+        border-left-color: $real-blue-color; // Real blue color for active spinner part
+        border-radius: 50%;
+        width: 50px; // Adjust based on how large the spinner should be
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+
+    .image.hidden {
+        opacity: 0;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

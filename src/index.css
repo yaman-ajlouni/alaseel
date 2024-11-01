@@ -8,9 +8,12 @@ body {
   background-color: #f7f7f7;
   scrollbar-color: red !important;
   overflow-x: hidden !important;
-  outline: 1px solid red;
+  overflow: scroll;
+  /* outline: 1px solid red; */
+}
 
-
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -19,8 +22,10 @@ code {
 }
 
 html {
-  scrollbar-color: red !important;
-  scrollbar-arrow-color: aquamarine;
+  /* scrollbar-color: red !important; */
+  /* scrollbar-arrow-color: aquamarine; */
+  scrollbar-color: transparent;
+  scrollbar-base-color: transparent;
   /* scrollbar-width: 50px; */
   /* width: 50vh; */
   /* width: 160vh !important; */

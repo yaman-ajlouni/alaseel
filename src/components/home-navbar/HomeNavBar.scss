@@ -22,11 +22,11 @@
 
 
         .home-navbar-logo-container {
-            margin-left: 40px;
+            margin-left: 80px;
 
             .home-navbar-logo {
-                width: 150px;
-                height: 105px;
+                width: 90px;
+                height: 65px;
             }
         }
 
@@ -56,7 +56,7 @@
 
         .home-navbar-logo {
             width: 200px;
-            height: 150px;
+            height: 130px;
             transition: all 0.5s ease;
         }
     }
@@ -84,7 +84,7 @@
             text-decoration: none;
             list-style-type: none;
             color: whitesmoke;
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 2px;
             font-weight: bold;
             font-family: "Rubik", sans-serif;
@@ -102,7 +102,9 @@
     }
 }
 
-@media (max-width:$mobile-bp) {
+
+
+@media (max-width: 900px) {
     .home-navbar-out-container {
         background-color: whitesmoke;
         position: fixed;
@@ -124,9 +126,10 @@
             margin-left: 0 !important;
             overflow: hidden;
 
+
             .home-navbar-logo {
-                height: 120px;
-                width: 160px;
+                height: 100px;
+                width: 140px;
                 margin-left: 10px;
                 max-width: 100%; // Ensure the logo does not exceed the container's width
 
@@ -142,7 +145,7 @@
         }
 
         .home-navbar-details-container {
-            visibility: hidden; // Initially hidden
+            // visibility: hidden; // Initially hidden
             height: 0;
             opacity: 0;
             transform: translateY(-20px);
@@ -173,7 +176,7 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
-            margin: 0;
+            margin-top: 10px;
             height: 40vh;
             opacity: 1;
             transform: translateY(0);

@@ -106,6 +106,7 @@
 
 @media (max-width: $mobile-bp) {
     .food-item-container {
+        width: 90%;
         .food-item-content {
             height: auto;
             flex-direction: column;

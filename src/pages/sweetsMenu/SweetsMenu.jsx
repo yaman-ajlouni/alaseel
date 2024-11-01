@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavBar } from '../../components/navbar/NavBar'
 import { SweetsItem } from './sweets-item/SweetsItem';
 import './SweetsMenu.scss'
@@ -77,6 +77,16 @@ export const SweetsMenu = () => {
         },
     ]
 
+
+    const [loadedImages, setLoadedImages] = useState(Array(sweetsItem.length).fill(false));
+
+    const handleImageLoad = (index) => {
+        const updatedLoadedImages = [...loadedImages];
+        updatedLoadedImages[index] = true;
+        setLoadedImages(updatedLoadedImages);
+    };
+
+
     return (
         <div>
             <NavBar />
@@ -93,6 +103,8 @@ export const SweetsMenu = () => {
                             arabicName={item.arabicName}
                             englishName={item.englishName}
                             details={item.details}
+                            isLoaded={loadedImages[index]}
+                            onLoad={() => handleImageLoad(index)}
                         />
                     ))}
                 </div>
@@ -111,5 +123,5 @@ export const SweetsMenu = () => {
             </div>
             <Footer />
         </div>
-    )
+    );
 }

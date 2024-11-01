@@ -1,10 +1,20 @@
 @import '../../assets/style/vars.scss';
 
-.catering-intro-out-container{
+.catering-intro-out-container {
     height: 50vh;
-    background-image: url('../../assets/images/catering-background-intro.gif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 50px;
+    position: relative; // Ensure positioning for child elements
+
+    // Optional: If you need specific styles for the image loader
+    .background-image {
+        position: absolute; // Ensure the image covers the container
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Ensure the image fits well in the container
+    }
 }

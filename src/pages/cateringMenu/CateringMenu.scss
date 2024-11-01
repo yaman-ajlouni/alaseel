@@ -1,153 +1,84 @@
 @import '../../assets/style/vars.scss';
 
 .catering-menu-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    background-color: $real-blue-color; // Background color for the whole section
-    margin-bottom: 50px;
-
+    padding: 2rem;
+    text-align: center;
+  
     .catering-menu-header {
-        text-align: center;
-        margin-bottom: 30px;
-
-        h1 {
-            font-size: 36px;
-            font-family: "Rubik", sans-serif;
-            color: $light-color;
-            margin-bottom: 10px;
-            text-shadow: $text-shadow; // Apply text-shadow if it's in your vars.scss
-        }
-
-        i {
-            font-size: 18px;
-            color: $light-color;
-            text-shadow: $text-shadow; // Apply text-shadow if it's in your vars.scss
-            max-width: 600px;
-            margin: 0 auto;
-        }
+      margin-bottom: 1rem;
+  
+      h2 {
+        font-size: 2rem;
+        color: #333;
+      }
     }
+  
+    .catering-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    .catering-card {
+      position: relative;
+      height: 550px;
+      width: 450px;
+      margin: 0.5rem;
+      overflow: hidden;
+  
+      .image-wrapper {
+        height: 90%;
+        width: 85%;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      .text-content {
+        position: absolute;
+        bottom: 0px; // Position the text box outside the image
+        right: 0;
+        width: 60%;
+        padding: 1rem;
+        background-color: $logo-color;
+        color: #fff;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(0);
+        opacity: 1;
+      }
+  
+  
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+  
+      p {
+        margin: 0.5rem 0 0;
+        font-size: 1rem;
+        color: #ddd;
+      }
+    }
+  }
+  
 
-    .catering-swiper {
-        width: 80%;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.1); // Swiper's background color
-        backdrop-filter: blur(5px);
-        border-radius: 15px;
-        box-shadow: $box-shadow; // Applying the new box-shadow variable
+  @media(max-width: 580px){
+    .catering-menu-container{
+        .catering-card{
+            height: 450px;
 
-        .swiper-slide-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row-reverse; // Adjust flex direction if needed for RTL
-            padding: 20px;
-
-            .image-wrapper {
-                flex: 0.4;
-
-                img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    border-radius: 10px;
-                    box-shadow: $box-shadow; // Applying box-shadow to images as well
-                }
+            .image-wrapper{
+                width: 90%;
             }
 
-            .text-content {
-                flex: 0.6;
-                padding: 20px;
-                text-align: left;
-                color: $light-color;
-
-                h2 {
-                    font-size: 33px;
-                    font-family: "Rubik", sans-serif;
-                    margin-bottom: 10px;
-                    text-transform: uppercase;
-                    letter-spacing: 3px;
-                    color: $secondary-color;
-                    font-weight: bold;
-                    text-shadow: $text-shadow; // Apply text-shadow if it's in your vars.scss
-                }
-
-                p {
-                    font-size: 20px;
-                    line-height: 1.8;
-                    color: $secondary-color;
-                    background-color: rgba(255, 255, 255, 0.1);
-                    padding: 15px;
-                    border-radius: 10px;
-                    backdrop-filter: blur(10px);
-                    box-shadow: $box-shadow; // Applying box-shadow to the description text box
-                }
+            .text-content{
             }
-        }
+        }   
     }
-}
-
-@media (max-width: 1024px) {
-    .catering-menu-container .catering-swiper {
-
-        width: 90%;
-        padding: 10px;
-        margin: 20px ;
-
-        .swiper-slide-content {
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-
-            .image-wrapper {
-                width: 100%;
-
-                img {
-                    height: 250px;
-                }
-            }
-
-            .text-content {
-                text-align: center;
-                padding: 10px;
-
-                h2 {
-                    font-size: 25px;
-                }
-
-                p {
-                    font-size: 16px;
-                    font-weight: 700;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .catering-menu-container .catering-menu-header {
-        margin-bottom: 5px;
-
-        h1 {
-            font-size: 30px ;
-            letter-spacing: 1px;
-        }
-
-        i {
-            font-size: 15px !important;
-        }
-    }
-
-    .catering-menu-container .catering-swiper .swiper-slide-content .text-content {
-        h2 {
-            font-size: 23px;
-        }
-
-        p {
-            font-size: 14px;
-            font-weight: 600;
-        }
-    }
-}
+  }

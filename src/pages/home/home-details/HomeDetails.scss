@@ -1,9 +1,9 @@
 @import '../../../assets/style/vars.scss';
 
 .home-details-out-container{
-    padding: 0 350px;
-    padding-bottom: 80px;
-    
+    padding: 50px 380px;
+    padding-bottom: 100px;
+
     .home-details-top-container{
         display: flex;
         justify-content: start;
@@ -34,7 +34,36 @@
     }
 }
 
-@media (max-width: $mobile-bp){
+@media (max-width : 1590px){
+    .home-details-out-container{
+        padding: 50px 300px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width : 1390px){
+    .home-details-out-container{
+        padding: 50px 200px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width : 1200px){
+    .home-details-out-container{
+        padding: 50px 100px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width : 900px){
+    .home-details-out-container{
+        padding: 50px ;
+        padding-bottom: 100px;
+    }
+}
+
+
+@media (max-width: 600px){
     .home-details-out-container{
         padding: 0;
         padding-left: 15px;

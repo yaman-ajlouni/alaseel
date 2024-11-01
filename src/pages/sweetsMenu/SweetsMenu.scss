@@ -1,7 +1,7 @@
 @import '../../assets/style/vars.scss';
 
 .sweets-menu-out-container {
-    background-color: $real-blue-color;
+    // background-color: $real-blue-color;
     padding: 50px 0;
 
     .sweets-menu-main-title {
@@ -46,7 +46,7 @@
 .sweets-menu-footer-out-container {
     display: flex;
     flex-direction: column;
-    background-color: $real-blue-color;
+    // background-color: $real-blue-color;
     color: $logo-color;
     font-weight: bold;
     letter-spacing: 1px;
@@ -99,7 +99,7 @@
 
         .sweets-menu-main-title {
             gap: 15px;
-            padding-top: 0;
+            padding-top: 30px;
 
         }
 

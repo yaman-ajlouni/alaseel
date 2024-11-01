@@ -22,8 +22,8 @@
         }
 
         .white-navbar-logo {
-            width: 200px;
-            height: 150px;
+            width: 220px;
+            height: 80%;
         }
     }
 
@@ -77,7 +77,7 @@
 @media (max-width:$mobile-bp) {
     .white-navbar-out-container {
         .white-navbar-logo-container {
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             justify-content: start;
 
             .pi-align-justify {
@@ -86,6 +86,11 @@
                 color: $logo-color;
                 right: 20px;
                 font-size: 25px;
+            }
+
+            .white-navbar-logo {
+                width: 150px;
+                height: 100%;
             }
         }
 

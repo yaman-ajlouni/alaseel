@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Intro.scss';
-// import Aos from 'aos';
+import { ImageLoader } from '../../../components/loader/ImageLoader';
 
 export const Intro = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-//   useEffect(() => {
-//     Aos.init();
-//     return () => {
-        
-//     };
-// }, []);
-  
   useEffect(() => {
     const preventSave = (event) => {
       event.preventDefault();
@@ -28,13 +22,16 @@ export const Intro = () => {
   return (
     <div className='intro-out-container'>
       <div className='intro-details-container'>
-        <video  className='video' 
+        {isLoading && <ImageLoader src='' alt='video placeholder' className='video-placeholder' />}
+        <video
+          className={`video ${isLoading ? 'hidden' : 'visible'}`}
           src={require('../../../assets/IMG_0816.MP4')}
           autoPlay
           loop
           muted
           playsInline
-          controls={false} // Disable video controls
+          controls={false}
+          onLoadedData={() => setIsLoading(false)} // Set loading to false when video data is loaded
         >
         </video>
       </div>

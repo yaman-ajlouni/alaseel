@@ -1,5 +1,6 @@
 import React from 'react';
 import './Story.scss';
+import { ImageLoader } from '../../../components/loader/ImageLoader'; // Adjust the path if needed
 
 export const Story = () => {
     return (
@@ -16,7 +17,11 @@ export const Story = () => {
                 </p>
             </div>
             <div className='story-right-container'>
-                <img src={require('../../../assets/images/sweetLuxury-main-logo.png')}  alt="Company Image" />
+                <ImageLoader
+                    src={require('../../../assets/images/sweetLuxury-main-logo.png')}
+                    alt="Company Image"
+                    className='story-image'
+                />
             </div>
         </div>
     );

@@ -1,11 +1,10 @@
-import React from 'react'
-import './WhiteNavBar.scss'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import './WhiteNavBar.scss';
+import { Link, useLocation } from 'react-router-dom';
 import 'primeicons/primeicons.css';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Aos from 'aos';
+import { ImageLoader } from '../loader/ImageLoader'; // Import the ImageLoader component
 
 export const WhiteNavBar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -15,11 +14,8 @@ export const WhiteNavBar = () => {
 
     useEffect(() => {
         Aos.init();
-        return () => {
-            
-        };
+        return () => {};
     }, []);
-
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -31,6 +27,7 @@ export const WhiteNavBar = () => {
                 setShowMenu(false);
             }
         };
+
         const place = location.pathname.slice(1);
         localStorage.setItem("tab", place);
         if (place === "") {
@@ -39,7 +36,6 @@ export const WhiteNavBar = () => {
             setPlace(place);
         }
 
-        console.log(place)
 
         if (showMenu) {
             document.addEventListener("mousedown", handleClickOutside);
@@ -50,38 +46,35 @@ export const WhiteNavBar = () => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [showMenu][location]);
+    }, [showMenu, location]);
 
     return (
-        <div className='white-navbar-out-container' >
-            <div  className='white-navbar-logo-container'>
+        <div className='white-navbar-out-container'>
+            <div className='white-navbar-logo-container'>
                 <div className='pi pi-align-justify' onClick={toggleMenu}></div>
-                <img className='white-navbar-logo' src={require('../../assets/images/main-logo.png')} alt="" />
-                {/* <div className='pi pi-facebook navbar-facebook'></div>
-                <div className='pi pi-instagram navbar-instagram'></div> */}
+                <ImageLoader
+                    src={require('../../assets/images/logo-main-not-cut.png')}
+                    alt="Logo"
+                    className='white-navbar-logo'
+                />
             </div>
-            <ul ref={navRef} className={`white-navbar-details-container ${showMenu ? 'active' : ""} `}>
-                <Link to='/' className={` link ${localStorage.getItem('tab') === "" ? 'visited' : ''}`}>
+            <ul ref={navRef} className={`white-navbar-details-container ${showMenu ? 'active' : ""}`}>
+                <Link to='/' className={`link ${localStorage.getItem('tab') === "" ? 'visited' : ''}`}>
                     Home
                 </Link>
-                <Link to='/About' className={` link ${localStorage.getItem('tab') === "About" ? 'visited' : ''}`}>
+                <Link to='/About' className={`link ${localStorage.getItem('tab') === "About" ? 'visited' : ''}`}>
                     About
                 </Link>
-                <Link to='/Retail' className={` link ${localStorage.getItem('tab') === "Retail" ? 'visited' : ''}`}>
+                <Link to='/Retail' className={`link ${localStorage.getItem('tab') === "Retail" ? 'visited' : ''}`}>
                     Menu
                 </Link>
-                <Link to='/Catering' className={` link ${localStorage.getItem('tab') === "Catering" ? 'visited' : ''}`}>
+                <Link to='/Catering' className={`link ${localStorage.getItem('tab') === "Catering" ? 'visited' : ''}`}>
                     Catering
                 </Link>
-                {/* <Link to='/Consultancy' className={` link ${localStorage.getItem('tab') === "Consultancy" ? 'visited' : ''}`}>
-                    Consultancy
-                </Link> */}
-                <Link to='/Contact' className={` link ${localStorage.getItem('tab') === "Contact" ? 'visited' : ''}`}>
+                <Link to='/Contact' className={`link ${localStorage.getItem('tab') === "Contact" ? 'visited' : ''}`}>
                     Contact
                 </Link>
-
-
             </ul>
         </div>
-    )
-}
+    );
+};

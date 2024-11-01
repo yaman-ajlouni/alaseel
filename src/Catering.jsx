@@ -5,6 +5,8 @@ import { CateringMenu } from './pages/cateringMenu/CateringMenu'
 import Logo from './components/logo/Logo'
 import { CateringGallery } from './pages/cateringGallery/CateringGallery'
 import { Footer } from './components/footer/Footer'
+import { CatContact } from './pages/catContact/CatContact'
+
 
 export const Catering = () => {
 
@@ -18,6 +20,7 @@ export const Catering = () => {
       <CateringIntro />
       <CateringMenu />
       {/* <Logo /> */}
+      <CatContact />
       <CateringGallery />
       <Footer />
     </div>
