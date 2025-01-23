@@ -9,11 +9,24 @@
     // justify-content: space-around;
     align-items: center;
     padding: 50px 20px;
+    position: relative;
 
     .contact-title-container {
         color: $secondary-color;
         font-size: 35px;
         text-transform: uppercase;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: $secondary-color;
+        }
     }
 
     .contact-details-container {
@@ -97,7 +110,7 @@
     .contact-out-container {
 
         .contact-title-container {
-            display: none;
+            margin-bottom: 30px;
         }
 
         .contact-details-container {

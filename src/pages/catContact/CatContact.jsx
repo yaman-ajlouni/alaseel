@@ -14,7 +14,7 @@ export const CatContact = () => {
           <h2>ADVICE ABOUT THE POSSIBILITIES?</h2>
           <p>Please contact us, we will be happy to help you.</p>
         </div>
-        <div className='cat-contact-contact-buttom-container'>
+        <div className='cat-contact-contact-button-container'>
           <Link to="/Contact"> {/* Add the 'to' prop with the desired route */}
             <button className=''>Contact Us</button>
           </Link>

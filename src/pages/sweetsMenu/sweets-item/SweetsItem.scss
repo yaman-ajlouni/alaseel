@@ -11,38 +11,37 @@
 
     .sweets-item-content {
         display: flex;
-        height: 300px;
-    }
+        height: 100%;
 
-    .sweets-item-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .sweets-item-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
-    }
 
-    .sweets-item-details-container {
-        font-size: 23px;
-        color: $real-blue-color;
-        flex: 1.3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-        font-weight: 500;
+        .sweets-item-details-container {
+            font-size: 23px;
+            flex: 1.3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            font-weight: 500;
+        }
     }
 
     .sweets-item-dropdown {
         background-color: lighten($secondary-color, 10%);
         padding: 10px;
-        // border-top: 1px solid darken($secondary-color, 10%);
         border-radius: 0 0 10px 10px;
 
         ul {
@@ -83,19 +82,15 @@
                     flex: 1;
                     display: flex;
                     flex-direction: column;
-                    // justify-content: center;
-                    // align-items: end;
-                    color: $real-blue-color;
+                    gap: 5px;
 
                     .detail-arabic {
-                        color: $real-blue-color;
                         font-size: 18px;
                         text-align: center;
                     }
 
                     .detail-english {
                         font-size: 16px;
-                        color: $real-blue-color;
                         text-align: center;
                     }
                 }
@@ -104,23 +99,85 @@
     }
 }
 
-@media (max-width: $mobile-bp) {
+@media (max-width : 1380px) {
+    .sweets-item-container {
+        .sweets-item-content {
+            height: 100%;
+
+            .sweets-item-image {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 850px) {
+    .sweets-item-container {
+        .sweets-item-content {
+            .sweets-item-image {
+                width: 200px;
+            }
+
+            .sweets-image {
+                width: 100%;
+            }
+
+            .sweets-item-details-container {
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
     .sweets-item-container {
         width: 90%;
+
         .sweets-item-content {
             height: auto;
             flex-direction: column;
+
+            .sweets-item-image {
+                width: 100%;
+            }
+
+            .sweets-item-details-container {
+                padding: 30px 0;
+                font-size: 20px;
+            }
         }
 
-        .sweets-item-details-container{
-            padding: 30px 0;
-        }
 
         .sweets-item-image {
             img {
                 border-radius: 0;
                 width: 100%;
 
+            }
+        }
+
+        .sweets-item-dropdown {
+            ul {
+                .detail-item {
+                    .detail-text {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+
+                        .detail-arabic {
+                            font-size: 16px;
+                            text-align: center;
+                        }
+
+                        .detail-english {
+                            font-size: 12px;
+                        }
+                    }
+                }
             }
         }
     }

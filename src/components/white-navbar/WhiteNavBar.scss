@@ -15,7 +15,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // background-color: $real-blue-color;
 
         .pi-align-justify {
             display: none;
@@ -46,9 +45,8 @@
             text-decoration: none;
             list-style-type: none;
             color: whitesmoke;
-            font-family: "Rubik", sans-serif;
             align-content: center;
-
+            font-size: 18px;
 
 
             &:hover {

@@ -1,0 +1,36 @@
+@import '../../assets/style/vars.scss';
+
+.image-loader-wrapper {
+    position: relative;
+    width: 100%; // Set to your preferred width
+    height: 100%; // Set to your preferred height
+
+    .placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f0f0f0; // Set to your preferred placeholder color
+        z-index: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .placeholder.hidden {
+        opacity: 0;
+    }
+
+    .image.hidden {
+        opacity: 0;
+    }
+}

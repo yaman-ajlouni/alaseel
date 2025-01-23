@@ -7,7 +7,7 @@ import { Footer } from '../../components/footer/Footer';
 export const FoodMenu = () => {
     const foodItems = [
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/eastern.jpg'),
             arabicName: 'وجبات شرقية',
             englishName: 'ORIENTAL MEALS',
             details: [
@@ -49,7 +49,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/western.jpg'),
             arabicName: 'وجبات غربية',
             englishName: 'WESTERN MEALS',
             details: [
@@ -74,7 +74,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/hot.jpg'),
             arabicName: 'مقبلات ساخنة',
             englishName: 'HOT APPETIZERES ',
             details: [
@@ -94,7 +94,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/oil.jpg'),
             arabicName: 'طعام زيت',
             englishName: 'OIL FOOD',
             details: [
@@ -107,7 +107,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/kebb.jpg'),
             arabicName: 'كبب',
             englishName: 'KEBBEH',
             details: [
@@ -129,7 +129,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/soup.jpg'),
             arabicName: 'شوربات',
             englishName: 'SOUPS',
             details: [
@@ -145,7 +145,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/fatat.jpg'),
             arabicName: 'فتات',
             englishName: 'FATAT',
             details: [
@@ -158,7 +158,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/cold.jpg'),
             arabicName: 'مقبلات باردة',
             englishName: 'COLD APPETIZERES',
             details: [
@@ -182,7 +182,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/salad.jpg'),
             arabicName: 'سلطات',
             englishName: 'SALADS',
             details: [
@@ -206,7 +206,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/external.jpg'),
             arabicName: 'طلبات خارجية',
             englishName: 'EXTERNAL ORDERS',
             details: [
@@ -228,7 +228,7 @@ export const FoodMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/foodImages/food1.jpg'),
+            imageSrc: require('../../assets/foodImages/sweet.jpg'),
             arabicName: 'حلويات بالقشطة',
             englishName: 'CREAM SWEETS',
             details: [

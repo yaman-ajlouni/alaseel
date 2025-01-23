@@ -9,7 +9,8 @@ body {
   scrollbar-color: red !important;
   overflow-x: hidden !important;
   overflow: scroll;
-  /* outline: 1px solid red; */
+  font-family: 'Playfair Display', serif;
+
 }
 
 body::-webkit-scrollbar {

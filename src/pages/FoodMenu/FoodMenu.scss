@@ -16,14 +16,12 @@
 
         .food-menu-arabic-title {
             font-size: 35px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 1px;
             font-weight: bold;
         }
 
         .food-menu-english-title {
             font-size: 40px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 3px;
             font-weight: bold;
         }
@@ -38,15 +36,12 @@
         gap: 15px;
         justify-content: center;
 
-
-
     }
 }
 
 .food-menu-footer-out-container {
     display: flex;
     flex-direction: column;
-    // background-color: $real-blue-color;
     color: $logo-color;
     font-weight: bold;
     letter-spacing: 1px;
@@ -62,12 +57,11 @@
         width: 100%;
         position: relative;
 
-
         &::after {
             content: '';
             display: block;
-            width: 30%; // adjust the width to your preference
-            height: 2px; // adjust the height to your preference
+            width: 30%; 
+            height: 2px; 
             background-color: $logo-color;
             margin: 0 auto;
             position: absolute;
@@ -81,7 +75,6 @@
                     rgba($logo-color, 0.3));
         }
 
-
     }
 
     .food-menu-footer-details {
@@ -92,9 +85,29 @@
     }
 }
 
-@media (max-width: $mobile-bp) {
-    .food-menu-out-container {
+@media(max-width: 1300px){
+    .food-menu-out-container{
         padding: 20px 0;
+        .food-menu-main-container{
+            padding: 20px 0;
+        }
+    }
+
+    .food-menu-footer-out-container{
+        padding: 20px 100px;
+        .food-menu-footer-title{
+            font-size: 20p;
+
+        }
+        .food-menu-footer-details{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 850px ) {
+    .food-menu-out-container {
+        padding: 10px 0;
         padding-top: 0;
 
         .food-menu-main-title {
@@ -111,11 +124,24 @@
     .food-menu-footer-out-container{
         padding: 20px;
         .food-menu-footer-title{
-            font-size: 20p;
+            font-size: 25px;
 
         }
         .food-menu-footer-details{
             font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 450px ) {
+    .food-menu-footer-out-container{
+        padding: 20px;
+        .food-menu-footer-title{
+            font-size: 20px;
+
+        }
+        .food-menu-footer-details{
+            font-size: 13px;
         }
     }
 }

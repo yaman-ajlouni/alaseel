@@ -12,7 +12,7 @@ export const FoodItem = ({ imageSrc, arabicName, englishName, details }) => {
         <div className='food-item-container'>
             <div className='food-item-content' onClick={toggleDetails}>
                 <div className='food-item-image'>
-                    <img src={imageSrc} alt={englishName} />
+                    <img className='food-image' src={imageSrc} alt={englishName} />
                 </div>
                 <div className='food-item-details-container'>
                     <div className='food-item-details-arabic'>{arabicName}</div>

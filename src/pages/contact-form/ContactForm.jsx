@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ContactForm.scss'
 
 export const ContactForm = () => {
+    const [textareaValue, setTextareaValue] = useState('');
+
     return (
         /* From Uiverse.io by somshri16 */
         <div className='contact-form-container'>
-            <div class="form-container">
-                <form class="form">
-                    <div class="form-group">
-                        <label for="email">Name</label>
+            <div className="form-container">
+                <form className="form">
+                    <div className="form-group">
+                        <label htmlFor="email">Name</label>
                         <input required="" name="email" id="email" type="text" />
                     </div>
-                    <div class="form-group">
-                        <label for="textarea">How Can We Help You?</label>
-                        <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
+                    <div className="form-group">
+                        <label htmlFor="textarea">How Can We Help You?</label>
+                        <textarea
+                            required
+                            cols="50"
+                            rows="10"
+                            id="textarea"
+                            name="textarea"
+                            value={textareaValue}
+                            onChange={(e) => setTextareaValue(e.target.value)}
+                        />
                     </div>
-                    <button type="submit" class="form-submit-btn">Submit</button>
+                    <button type="submit" className="form-submit-btn">Submit</button>
                 </form>
             </div>
         </div>

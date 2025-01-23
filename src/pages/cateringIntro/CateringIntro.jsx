@@ -1,6 +1,6 @@
 import React from 'react';
-import './CateringIntro.scss';
-import { ImageLoader } from '../../components/loader/ImageLoader'; // Adjust the path if needed
+import './Cateringintro.scss';
+import { ImageLoader } from '../../components/imageLoader/ImageLoader'; // Adjust the path if needed
 
 export const CateringIntro = () => {
   return (

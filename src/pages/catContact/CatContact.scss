@@ -7,14 +7,13 @@
     gap: 1.5rem;
     align-items: center;
 
-    // Styling for the Top Divider
     .top-divider {
         width: 100%;
-        height: 60px; // Increased height for a bolder look
-        background-color: $real-blue-color; // Base background color
+        height: 60px;
+        background-color: $real-blue-color;
         clip-path: polygon(0 100%, 10% 70%, 30% 80%, 50% 60%, 70% 70%, 90% 90%, 100% 100%, 100% 0, 0 0); // Enhanced wavy shape
         position: relative;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Adding shadow for depth
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
         &:after {
             content: '';
@@ -25,18 +24,17 @@
             bottom: 0;
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
             clip-path: polygon(0 100%, 10% 70%, 30% 80%, 50% 60%, 70% 70%, 90% 90%, 100% 100%, 100% 0, 0 0); // Duplicate wavy effect
-            opacity: 0.5; // Slight transparency for a layered effect
+            opacity: 0.5;
         }
     }
 
-    // Styling for the Bottom Divider (pointing upwards)
     .bottom-divider {
         width: 100%;
-        height: 60px; // Increased height for consistency
-        background-color: $real-blue-color; // Base background color
+        height: 60px;
+        background-color: $real-blue-color;
         clip-path: polygon(0 0, 10% 10%, 30% 0, 50% 20%, 70% 0, 90% 10%, 100% 0, 100% 100%, 0 100%); // Adjusted wavy shape to point upward
         position: relative;
-        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); // Shadow for depth
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
 
         &:after {
             content: '';
@@ -65,7 +63,7 @@
 
         .contact-text {
             position: relative;
-            color: $real-blue-color;
+            color: black;
             text-align: center;
             padding-top: 2rem;
             padding-bottom: 1rem;
@@ -88,15 +86,14 @@
             }
         }
 
-        .cat-contact-contact-buttom-container{
+        .cat-contact-contact-button-container {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            button{
-                border: none;
-                background-color: $logo-color;
+            button {
+                border: 1px solid $real-blue-color;
                 padding: 10px 20px;
                 color: $real-blue-color;
                 font-weight: bold;
@@ -106,9 +103,9 @@
                 transition: all 0.5s;
 
 
-                &:hover{
+                &:hover {
                     background-color: $real-blue-color;
-                    color: $logo-color;
+                    color: white;
                     transition: all 0.5s;
                 }
             }

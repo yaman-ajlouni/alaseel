@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import 'primeicons/primeicons.css';
 import { useState, useEffect, useRef } from 'react';
 import Aos from 'aos';
-import { ImageLoader } from '../loader/ImageLoader'; // Import the ImageLoader component
+import { ImageLoader } from '../imageLoader/ImageLoader';
 
 export const WhiteNavBar = () => {
     const [showMenu, setShowMenu] = useState(false);

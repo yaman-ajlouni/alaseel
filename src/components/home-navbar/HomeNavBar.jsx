@@ -45,7 +45,7 @@ export const HomeNavBar = () => {
     return (
         <div className={`home-navbar-out-container ${scrolled ? 'scrolled' : ''}`}>
             <div className='home-navbar-logo-container'>
-                <div clas   sName='pi pi-align-justify' onClick={toggleMenu}></div>
+                <div className='pi pi-align-justify' onClick={toggleMenu}></div>
                 <img className='home-navbar-logo' src={require('../../assets/images/main-logo.png')} alt="Logo" />
             </div>
             <ul ref={navRef} className={`home-navbar-details-container ${showMenu ? 'active' : ''} ${scrolled ? 'scrolled' : ''}`}>

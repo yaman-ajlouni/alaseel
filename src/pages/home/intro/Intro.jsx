@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Intro.scss';
-import { ImageLoader } from '../../../components/loader/ImageLoader';
 
 export const Intro = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +21,7 @@ export const Intro = () => {
   return (
     <div className='intro-out-container'>
       <div className='intro-details-container'>
-        {isLoading && <ImageLoader src='' alt='video placeholder' className='video-placeholder' />}
+        {isLoading && <div className="video-placeholder"></div>}
         <video
           className={`video ${isLoading ? 'hidden' : 'visible'}`}
           src={require('../../../assets/IMG_0816.MP4')}
@@ -32,8 +31,7 @@ export const Intro = () => {
           playsInline
           controls={false}
           onLoadedData={() => setIsLoading(false)} // Set loading to false when video data is loaded
-        >
-        </video>
+        />
       </div>
     </div>
   );

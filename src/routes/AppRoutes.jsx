@@ -7,6 +7,7 @@ import { Catering } from '../Catering';
 import { Contact } from '../Contact';
 import { FoodMenu } from '../pages/FoodMenu/FoodMenu';
 import { SweetsMenu } from '../pages/sweetsMenu/SweetsMenu';
+import { SweetsPackages } from '../pages/sweetsPackages/SweetsPackages';
 
 
 export const AppRoutes = () => {
@@ -19,6 +20,7 @@ export const AppRoutes = () => {
       <Route path='/Contact' element={<Contact />} />
       <Route path='/food' element={<FoodMenu />} />
       <Route path='/sweets' element={<SweetsMenu />} />
+      <Route path='/sweets-packages' element={<SweetsPackages />} />
     </Routes>
   )
 }

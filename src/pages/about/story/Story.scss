@@ -19,15 +19,12 @@
         justify-content: center;
         padding-right: 250px;
         padding-left: 250px;
-        color: $real-blue-color;
-        font-family: 'Roboto', sans-serif;
         position: relative; // Ensure that the pseudo-element is positioned relative to this container
 
         h2 {
-            font-size: 2rem;
+            font-size: 30px;
             margin-bottom: 15px;
             margin-top: 10px;
-            color: $logo-color;
             font-weight: 700;
             position: relative;
             text-align: start;
@@ -39,14 +36,13 @@
                 bottom: -10px; // Adjust the position of the line below the text
                 width: 100%;
                 height: 2px; // Line thickness
-                background-color: $logo-color; // Line color, same as h2 color
+                background-color: black; // Line color, same as h2 color
             }
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 18px;
             line-height: 1.6;
-            color: $logo-color;
             text-align: start;
         }
     }
@@ -66,6 +62,14 @@
     }
 }
 
+@media(max-width: 1550px){
+    .story-out-container{
+        .story-left-container{
+            padding: 0 100px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .story-out-container {
         flex-direction: column;
@@ -74,12 +78,11 @@
         gap: 10px;
 
         .story-left-container {
-            padding-right: 10px;
+            padding: 0 30px;
             text-align: center;
-            padding-left: 10px;
 
             h2 {
-                font-size: 1.8rem;
+                font-size: 28px;
                 text-align: start;
 
                 &::after {
@@ -89,7 +92,7 @@
             }
 
             p {
-                font-size: 1rem;
+                font-size: 17px;
                 text-align: start;
             }
         }
@@ -97,6 +100,20 @@
         .story-right-container {
             .story-image {
                 width: 90%;
+            }
+        }
+    }
+}
+
+@media(max-width:500px){
+    .story-out-container{
+        .story-left-container{
+            h2{
+                font-size: 23px;
+            }
+
+            p{
+                font-size: 13px;
             }
         }
     }

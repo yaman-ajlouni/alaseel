@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewCategories.scss';
 import { Link } from 'react-router-dom';
-import { ImageLoader } from '../../../components/loader/ImageLoader'; // Adjust the path if needed
+import { ImageLoader } from '../../../components/imageLoader/ImageLoader'; // Adjust the path if needed
 
 export const NewCategories = () => {
     return (

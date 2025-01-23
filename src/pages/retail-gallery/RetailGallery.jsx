@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,20 +6,27 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import '../../assets/style/GalleryContainer.scss';
-import { fetchMenuData } from '../../redux/actions/menuActions';
-import LoadingSpinner from '../../components/loading/LoadingSpinner';
-import Error from '../../components/error/Error';
+import img1 from '../../assets/catering-image/buffet.jpg';
+import img2 from '../../assets/catering-image/cocktail.jpg';
+import img3 from '../../assets/catering-image/corporate.jpg';
+import img4 from '../../assets/catering-image/dinner.jpg';
+import img5 from '../../assets/catering-image/private.jpg';
+import img6 from '../../assets/catering-image/social.jpg';
+import img7 from '../../assets/catering-image/sweets.jpg';
+import img8 from '../../assets/catering-image/wedding.jpg';
+
 
 export const RetailGallery = () => {
-    const dispatch = useDispatch();
-    const { data: images, loading, error } = useSelector((state) => state.menu);
-
-    useEffect(() => {
-        dispatch(fetchMenuData());
-    }, [dispatch]);
-
-    if (loading) return <p><LoadingSpinner /></p>;
-    if (error) return <p><Error /></p>;
+    const images = [
+        { img: img1 },
+        { img: img2 },
+        { img: img3 },
+        { img: img4 },
+        { img: img5 },
+        { img: img6 },
+        { img: img7 },
+        { img: img8 },
+    ];
 
     return (
         <div className='gallery-container'>
@@ -47,7 +53,7 @@ export const RetailGallery = () => {
                             <div className='gallery-card-container'>
                                 <div className='gallery-card-img'>
                                     <img
-                                        src={image.image_url}
+                                        src={image.img}
                                         alt={`retail-gallery-${index + 1}`}
                                         className='loaded'
                                     />
