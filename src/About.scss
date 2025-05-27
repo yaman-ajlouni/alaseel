@@ -1,7 +1,8 @@
-
 @import './assets/style/vars.scss';
 
-.about-container{
+.about-container {
+    $font-serif: 'Playfair Display', 'Georgia', serif;
+    $font-sans: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 
     // background-color: $real-blue-color !important;
 }

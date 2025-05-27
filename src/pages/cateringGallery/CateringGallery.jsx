@@ -6,14 +6,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Autoplay } from "swiper/modules";
 import '../../assets/style/GalleryContainer.scss';
-import img1 from '../../assets/catering-image/buffet.jpg';
-import img2 from '../../assets/catering-image/cocktail.jpg';
-import img3 from '../../assets/catering-image/corporate.jpg';
-import img4 from '../../assets/catering-image/dinner.jpg';
-import img5 from '../../assets/catering-image/private.jpg';
-import img6 from '../../assets/catering-image/social.jpg';
-import img7 from '../../assets/catering-image/sweets.jpg';
-import img8 from '../../assets/catering-image/wedding.jpg';
+import img1 from '../../assets/catering/catering-swiper/catering-swiper1.jpg';
+import img2 from '../../assets/catering/catering-swiper/catering-swiper2.jpg';
+import img3 from '../../assets/catering/catering-swiper/catering-swiper3.jpg';
+import img4 from '../../assets/catering/catering-swiper/catering-swiper4.jpg';
+import img5 from '../../assets/catering/catering-swiper/catering-swiper5.jpg';
+import img6 from '../../assets/catering/catering-swiper/catering-swiper6.jpg';
+import img7 from '../../assets/catering/catering-swiper/catering-swiper7.jpg';
+import img8 from '../../assets/catering/catering-swiper/catering-swiper8.jpg';
 
 
 export const CateringGallery = () => {

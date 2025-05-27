@@ -24,7 +24,7 @@ export const Intro = () => {
         {isLoading && <div className="video-placeholder"></div>}
         <video
           className={`video ${isLoading ? 'hidden' : 'visible'}`}
-          src={require('../../../assets/IMG_0816.MP4')}
+          src={require('../../../assets/IMG_0816.mp4')}
           autoPlay
           loop
           muted

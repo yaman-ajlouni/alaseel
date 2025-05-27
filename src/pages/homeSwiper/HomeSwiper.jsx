@@ -6,14 +6,15 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import "../../assets/style/GalleryContainer.scss";
-import img1 from '../../assets/catering-image/buffet.jpg'; 
-import img2 from '../../assets/catering-image/cocktail.jpg';
-import img3 from '../../assets/catering-image/corporate.jpg'; 
-import img4 from '../../assets/catering-image/dinner.jpg'; 
-import img5 from '../../assets/catering-image/private.jpg'; 
-import img6 from '../../assets/catering-image/social.jpg'; 
-import img7 from '../../assets/catering-image/sweets.jpg'; 
-import img8 from '../../assets/catering-image/wedding.jpg'; 
+import img1 from '../../assets/home/swiper/home-swiper1.jpg';
+import img2 from '../../assets/home/swiper/home-swiper2.jpg';
+import img3 from '../../assets/home/swiper/home-swiper3.jpg';
+import img4 from '../../assets/home/swiper/home-swiper4.jpg';
+import img5 from '../../assets/home/swiper/home-swiper5.jpg';
+import img6 from '../../assets/home/swiper/home-swiper6.jpg';
+import img7 from '../../assets/home/swiper/home-swiper7.jpg';
+import img8 from '../../assets/home/swiper/home-swiper8.jpg';
+import img9 from '../../assets/home/swiper/home-swiper9.jpg';
 
 
 const HomeSwiper = () => {
@@ -26,7 +27,8 @@ const HomeSwiper = () => {
     { img: img6 },
     { img: img7 },
     { img: img8 },
-];
+    { img: img9 },
+  ];
 
 
   return (
@@ -42,7 +44,7 @@ const HomeSwiper = () => {
           700: { slidesPerView: 2 },
           830: { slidesPerView: 3 },
           1100: { slidesPerView: 4 },
-          1360: { slidesPerView: 5 },
+          1650: { slidesPerView: 5 },
         }}
       >
         {images.map((image, index) => (

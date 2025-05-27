@@ -12,7 +12,7 @@ export const SweetsMenu = () => {
 
     const sweetsItem = [
         {
-            imageSrc: require('../../assets/sweetsImages/sweets1.jpg'),
+            imageSrc: require('../../assets/sweetsImages/arabic.jpg'),
             arabicName: 'حلويات عربية',
             englishName: 'ARABIC SWEETS',
             details: [
@@ -28,7 +28,7 @@ export const SweetsMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/sweetsImages/sweets1.jpg'),
+            imageSrc: require('../../assets/sweetsImages/sweet2.jpg'),
             arabicName: 'معمول محشي',
             englishName: 'STUFFED MAAMOUL',
             details: [
@@ -37,7 +37,7 @@ export const SweetsMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/sweetsImages/sweets1.jpg'),
+            imageSrc: require('../../assets/sweetsImages/dry.jpg'),
             arabicName: 'حلويات نواشف',
             englishName: 'NAWASHIF SWEETS ',
             details: [
@@ -50,7 +50,7 @@ export const SweetsMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/sweetsImages/sweets1.jpg'),
+            imageSrc: require('../../assets/sweetsImages/fruits.jpg'),
             arabicName: 'محشي فواكه',
             englishName: 'FRUIT STUFFED',
             details: [
@@ -64,7 +64,7 @@ export const SweetsMenu = () => {
             ]
         },
         {
-            imageSrc: require('../../assets/sweetsImages/sweets1.jpg'),
+            imageSrc: require('../../assets/sweetsImages/special.jpg'),
             arabicName: 'مميزات عربية',
             englishName: 'ARABIC SPECIALS',
             details: [

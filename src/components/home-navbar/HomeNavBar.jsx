@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './HomeNavBar.scss';
 import { Link, useLocation } from 'react-router-dom';
 import 'primeicons/primeicons.css';
@@ -8,7 +8,7 @@ export const HomeNavBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const navRef = useRef(null);
     const location = useLocation();
-    const [place, setPlace] = useState("");
+    const [place ,setPlace] = useState("");
 
     const toggleMenu = () => {
         setShowMenu(prevState => !prevState);

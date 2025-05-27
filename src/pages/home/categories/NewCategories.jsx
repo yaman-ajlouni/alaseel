@@ -1,49 +1,101 @@
-import React from 'react';
 import './NewCategories.scss';
 import { Link } from 'react-router-dom';
-import { ImageLoader } from '../../../components/imageLoader/ImageLoader'; // Adjust the path if needed
+import about from '../../../assets/home/home-about.jpg'
+import menu from '../../../assets/home/home-menu.jpg'
+import catering from '../../../assets/home/home-catering.jpg'
 
 export const NewCategories = () => {
     return (
         <div className='new-categories-out-container'>
-            <div className='new-about-out-container'>
-                <Link className='new-about-card-container' to='/About'>
-                    <ImageLoader
-                        src={require('../../../assets/images/ConsultancyMain.jpg')}
-                        alt='About'
-                        className='new-about-img'
-                    />
-                    <div className='new-about-card'>
-                        <h3>About</h3>
-                        <div>Welcome to our company! We are dedicated to providing the best services to our customers. With years of experience in the industry. Join us on our journey to success and discover what makes us different.</div>
+            <div className='elegant-header'>
+                <div className='header-line'></div>
+                <h2 className='header-title'>Experience Excellence</h2>
+                <p className='header-subtitle'>Discover our world of refined taste and impeccable service</p>
+                <div className='header-line'></div>
+            </div>
+            
+            <div className='categories-wrapper'>
+                <Link className='elegant-category-card' to='/About'>
+                    <div className='card-inner'>
+                        <div className='image-section'>
+                            <img src={about} alt='About' className='category-image' />
+                            <div className='image-overlay'></div>
+                            <div className='card-number'>I</div>
+                        </div>
+                        <div className='content-section'>
+                            <div className='content-wrapper'>
+                                <h3 className='category-title'>Our Story</h3>
+                                <div className='title-underline'></div>
+                                <p className='category-description'>
+                                    Welcome to our distinguished establishment, where tradition meets innovation. 
+                                    With years of dedication to excellence, we have crafted an experience that 
+                                    transcends expectations. Our journey is one of passion, precision, and 
+                                    unwavering commitment to quality.
+                                </p>
+                                <div className='cta-section'>
+                                    <span className='elegant-cta'>Discover More</span>
+                                    <div className='cta-line'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link className='elegant-category-card reverse' to='/Retail'>
+                    <div className='card-inner'>
+                        <div className='image-section'>
+                            <img src={menu} alt='Menu' className='category-image' />
+                            <div className='image-overlay'></div>
+                            <div className='card-number'>II</div>
+                        </div>
+                        <div className='content-section'>
+                            <div className='content-wrapper'>
+                                <h3 className='category-title'>Exquisite Menu</h3>
+                                <div className='title-underline'></div>
+                                <p className='category-description'>
+                                    Al Aseel presents a curated selection of mouth-watering delicacies and 
+                                    artisanal sweets. Each creation is meticulously crafted and elegantly 
+                                    presented in our signature packaging, ensuring an unforgettable experience 
+                                    from the first glance to the final taste.
+                                </p>
+                                <div className='cta-section'>
+                                    <span className='elegant-cta'>View Collection</span>
+                                    <div className='cta-line'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link className='elegant-category-card' to='/Catering'>
+                    <div className='card-inner'>
+                        <div className='image-section'>
+                            <img src={catering} alt='Catering' className='category-image' />
+                            <div className='image-overlay'></div>
+                            <div className='card-number'>III</div>
+                        </div>
+                        <div className='content-section'>
+                            <div className='content-wrapper'>
+                                <h3 className='category-title'>Bespoke Catering</h3>
+                                <div className='title-underline'></div>
+                                <p className='category-description'>
+                                    Al Aseel's catering excellence transforms your special moments into 
+                                    extraordinary memories. Our culinary artisans create sophisticated dishes 
+                                    and exquisite sweets that delight both the palate and the eye, ensuring 
+                                    your event is nothing short of perfection.
+                                </p>
+                                <div className='cta-section'>
+                                    <span className='elegant-cta'>Begin Your Journey</span>
+                                    <div className='cta-line'></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </Link>
             </div>
-            <div className='new-retail-out-container'>
-                <Link className='new-retail-card-container' to='/Retail'>
-                    <ImageLoader
-                        src={require('../../../assets/images/RetailMain.jpg')}
-                        alt='Retail'
-                        className='new-retail-img'
-                    />
-                    <div className='new-retail-card'>
-                        <h3>Menu</h3>
-                        <div>Al Aseel's mouth-watering sweets and delighted products, available at our signature shops and point of sales, are packaged and presented in elegant boxes.</div>
-                    </div>
-                </Link>
-            </div>
-            <div className='new-catering-out-container'>
-                <Link className='new-catering-card-container' to='/Catering'>
-                    <ImageLoader
-                        src={require('../../../assets/images/CateringMain.jpg')}
-                        alt='Catering'
-                        className='new-catering-img'
-                    />
-                    <div className='new-catering-card'>
-                        <h3>Catering</h3>
-                        <div>Al Aseel serves the very best quality catering for years at every imaginable kind of event creating artistic, elegant, and memorable dishes and sweets to be savored by both eye and palate.</div>
-                    </div>
-                </Link>
+            
+            <div className='elegant-footer'>
+                <div className='decorative-element'></div>
             </div>
         </div>
     );

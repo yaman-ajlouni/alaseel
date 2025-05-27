@@ -25,7 +25,7 @@ export const SweetsItem = ({ imageSrc, arabicName, englishName, details }) => {
                     <ul>
                         {details.map((detail, index) => (
                             <li key={index} className='detail-item'>
-                                <img src={detail.imageSrc} alt={detail.englishName} className='detail-image'/>
+                                {/* <img src={detail.imageSrc} alt={detail.englishName} className='detail-image'/> */}
                                 <div className='detail-text'>
                                     <div className='detail-arabic'>{detail.arabicName}</div>
                                     <div className='detail-english'>{detail.englishName}</div>
