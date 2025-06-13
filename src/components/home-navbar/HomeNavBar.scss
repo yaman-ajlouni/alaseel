@@ -182,6 +182,7 @@
             opacity: 1;
             transform: translateY(0);
             padding: 30px 0;
+            min-height: 300px;
             transition: height 0.6s ease, opacity 0.6s ease, transform 0.6s ease, visibility 0s; // Remove delay when active
         }
     }

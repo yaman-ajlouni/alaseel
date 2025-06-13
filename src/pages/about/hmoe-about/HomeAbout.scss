@@ -2,18 +2,46 @@
 
 .home-about-out-container {
     height: 60vh;
+    min-height: 500px;
+    background: linear-gradient(135deg, $real-blue-color 0%, darken($real-blue-color, 8%) 100%);
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 30px 60px 20px;
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+    padding: 40px 100px;
     margin-bottom: 30px;
-    background-color: $real-blue-color;
+    overflow: hidden;
 
+    // Subtle background pattern overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    // Decorative floating elements
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+        z-index: 1;
+    }
 
     .home-about-left-container {
         flex: 1;
@@ -21,25 +49,56 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
-        padding: 0 50px !important ;
-        background-color: $real-blue-color;
-
+        gap: 40px;
+        padding: 0 60px;
+        position: relative;
+        z-index: 2;
+        animation: slideInLeft 0.8s ease-out;
 
         .home-about-journey-title {
             width: 100%;
             text-align: center;
             color: $secondary-color;
-            font-weight: bold;
-            font-size: 30px;
-        }
+            font-weight: 700;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
 
+            // Enhanced decorative underline
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, transparent, $secondary-color, transparent);
+                border-radius: 2px;
+                box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+            }
+        }
 
         .home-about-journey-details {
             text-align: center;
             color: $secondary-color;
-            font-weight: 500;
-         }
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 100%;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            opacity: 0.95;
+            
+            // Enhanced readability
+            &::first-letter {
+                font-size: 1.2em;
+                font-weight: 600;
+                color: lighten($secondary-color, 10%);
+            }
+        }
     }
 
     .home-about-right-container {
@@ -51,64 +110,235 @@
         background-repeat: no-repeat;
         background-size: cover;
         margin-left: 40px;
-        background-color: $real-blue-color;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.2),
+            0 10px 20px rgba(0, 0, 0, 0.1);
+        animation: slideInRight 0.8s ease-out 0.2s both;
 
+        // Image overlay for better contrast
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg, 
+                rgba(0, 0, 0, 0.1) 0%, 
+                rgba(0, 0, 0, 0.05) 50%, 
+                rgba(255, 255, 255, 0.1) 100%
+            );
+            z-index: 1;
+        }
+
+        // Hover effect
+        &:hover {
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.25),
+                0 15px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+        }
     }
 }
 
+// Animations
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.05);
+    }
+}
+
+// Enhanced responsive design
 @media (max-width: 1420px) {
     .home-about-out-container {
         display: flex;
         flex-direction: column;
-        height: 840px;
-        padding: 0;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        height: auto;
+        min-height: 700px;
+        padding: 40px 20px;
+        gap: 40px;
+
+        &::after {
+            top: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+        }
 
         .home-about-left-container {
-            margin-top: 30px;
-            gap: 30px;
-            padding: 0 20px !important;
+            margin-top: 20px;
+            gap: 35px;
+            padding: 0 30px;
+            order: 1;
 
             .home-about-journey-title {
                 color: $secondary-color;
                 position: relative;
+                font-size: clamp(1.8rem, 5vw, 2.2rem);
+                margin-bottom: 20px;
 
-
+                // Enhanced decorative lines
                 &::before,
                 &::after {
                     content: "";
                     position: absolute;
                     top: 50%;
-                    width: 15%;
-                    height: 1.5px;
-                    background-color: #ccc;
+                    width: 20%;
+                    height: 2px;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+                    animation: pulse 3s ease-in-out infinite;
                 }
 
                 &::before {
                     left: 0;
-                    margin-right: 10px; /* Space between line and text */
+                    animation-delay: 0s;
                 }
     
                 &::after {
                     right: 0;
-                    margin-left: 10px; /* Space between line and text */
+                    animation-delay: 1.5s;
+                }
+
+                // Remove bottom decoration on mobile
+                &::after {
+                    bottom: auto;
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
                 }
             }
 
             .home-about-journey-details {
                 color: $secondary-color;
-                padding: 0 10px;
+                padding: 0 20px;
+                font-size: 15px;
+                line-height: 1.7;
+                text-align: justify;
+                text-align-last: center;
             }
         }
 
         .home-about-right-container {
-            // background-image: url('../../../assets/images/aseel-background-home-cutted.jpg');
             background-position: top;
             margin: 0;
             background-size: contain;
-            height: 50vh;
+            height: 45vh;
+            min-height: 300px;
+            order: 2;
+            border-radius: 15px;
+            margin-top: 20px;
             
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-about-out-container {
+        padding: 30px 15px;
+        min-height: 600px;
+        gap: 30px;
+
+        .home-about-left-container {
+            padding: 0 20px;
+            gap: 25px;
+
+            .home-about-journey-title {
+                font-size: clamp(1.5rem, 6vw, 1.8rem);
+                
+                &::before,
+                &::after {
+                    width: 15%;
+                    height: 1.5px;
+                }
+            }
+
+            .home-about-journey-details {
+                font-size: 14px;
+                padding: 0 10px;
+                line-height: 1.6;
+            }
+        }
+
+        .home-about-right-container {
+            height: 35vh;
+            min-height: 250px;
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .home-about-out-container {
+        padding: 20px 10px;
+        min-height: 550px;
+
+        .home-about-left-container {
+            padding: 0 15px;
+            gap: 20px;
+
+            .home-about-journey-title {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+                
+                &::before,
+                &::after {
+                    width: 12%;
+                }
+            }
+
+            .home-about-journey-details {
+                font-size: 13px;
+                padding: 0 5px;
+            }
+        }
+
+        .home-about-right-container {
+            height: 30vh;
+            min-height: 200px;
         }
     }
 }

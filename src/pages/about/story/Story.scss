@@ -3,47 +3,89 @@
 .story-out-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding: 80px 0;
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
+    position: relative;
+    min-height: 80vh;
+    
+    // Subtle background pattern
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 1;
+    }
 
     .story-left-container {
         flex: 2;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 250px;
-        padding-left: 250px;
-        position: relative; // Ensure that the pseudo-element is positioned relative to this container
+        padding: 0 250px;
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 0.8s ease-out;
 
         h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 24px;
             margin-top: 10px;
             font-weight: 700;
             position: relative;
             text-align: start;
+            color: #2c1810;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
 
             &::after {
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: -10px; // Adjust the position of the line below the text
-                width: 100%;
-                height: 2px; // Line thickness
-                background-color: black; // Line color, same as h2 color
+                bottom: -16px;
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(90deg, #d4af37, #f39c12);
+                border-radius: 2px;
+                box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 120px;
             }
         }
 
         p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
             text-align: start;
+            color: #5d4e37;
+            margin-bottom: 20px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            // Enhanced readability
+            &::first-letter {
+                font-size: 1.2em;
+                font-weight: 600;
+                color: #8b4513;
+            }
         }
     }
 
@@ -53,19 +95,102 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        position: relative;
+        z-index: 2;
+        animation: fadeInRight 0.8s ease-out 0.2s both;
+
+        // Decorative background
+        &::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(243, 156, 18, 0.1));
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            z-index: -1;
+            animation: pulse 3s ease-in-out infinite;
+        }
 
         .story-image {
-            width: 30%;
+            width: 35%;
+            max-width: 300px;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+
+            &:hover {
+                box-shadow: 
+                    0 30px 60px rgba(0, 0, 0, 0.15),
+                    0 15px 30px rgba(0, 0, 0, 0.08);
+            }
         }
     }
 }
 
+// Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.8);
+        opacity: 0.05;
+    }
+}
+
+// Enhanced responsive design
 @media(max-width: 1550px){
     .story-out-container{
         .story-left-container{
+            padding: 0 150px;
+        }
+    }
+}
+
+@media(max-width: 1200px){
+    .story-out-container{
+        padding: 60px 0;
+        gap: 40px;
+        
+        .story-left-container{
             padding: 0 100px;
+        }
+        
+        .story-right-container {
+            .story-image {
+                width: 40%;
+            }
         }
     }
 }
@@ -73,43 +198,91 @@
 @media (max-width: 768px) {
     .story-out-container {
         flex-direction: column;
-        padding-bottom: 20px;
-        padding-top: 0;
-        gap: 10px;
+        padding: 40px 0;
+        gap: 30px;
+        min-height: auto;
 
         .story-left-container {
             padding: 0 30px;
             text-align: center;
 
             h2 {
-                font-size: 28px;
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
                 text-align: start;
+                margin-bottom: 20px;
 
                 &::after {
-                    bottom: -8px; // Adjust the position for smaller screens
-                    height: 1px; // Adjust thickness for smaller screens
+                    bottom: -12px;
+                    height: 3px;
+                    width: 60px;
                 }
             }
 
             p {
-                font-size: 17px;
+                font-size: 16px;
+                line-height: 1.7;
                 text-align: start;
+                margin-bottom: 16px;
             }
         }
 
         .story-right-container {
+            &::before {
+                width: 150px;
+                height: 150px;
+            }
+            
             .story-image {
-                width: 90%;
+                width: 70%;
+                max-width: 250px;
+                border-radius: 15px;
             }
         }
     }
 }
 
-@media(max-width:500px){
+@media(max-width: 500px){
+    .story-out-container{
+        padding: 30px 0;
+        
+        .story-left-container{
+            padding: 0 20px;
+            
+            h2{
+                font-size: clamp(1.5rem, 7vw, 2rem);
+                margin-bottom: 16px;
+                
+                &::after {
+                    width: 50px;
+                    height: 2px;
+                    bottom: -8px;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 14px;
+            }
+        }
+        
+        .story-right-container {
+            .story-image {
+                width: 80%;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+// Additional enhancement for very small screens
+@media(max-width: 350px){
     .story-out-container{
         .story-left-container{
+            padding: 0 15px;
+            
             h2{
-                font-size: 23px;
+                font-size: 1.4rem;
             }
 
             p{

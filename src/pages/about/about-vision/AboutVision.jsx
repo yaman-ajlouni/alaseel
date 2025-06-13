@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import './AboutVision.scss'
 import AOS from 'aos';
 

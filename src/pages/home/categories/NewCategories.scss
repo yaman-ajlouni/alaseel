@@ -76,13 +76,9 @@ $font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
                 transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
                 &:hover {
-                    transform: translateY(-10px);
                     box-shadow: 0 30px 80px $elegant-shadow-dark;
 
                     .image-section {
-                        .category-image {
-                            transform: scale(1.05);
-                        }
 
                         .image-overlay {
                             opacity: 0.2;
