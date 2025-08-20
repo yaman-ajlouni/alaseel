@@ -79,7 +79,6 @@
                 margin-bottom: 0;
             }
 
-            // Enhanced readability
             &::first-letter {
                 font-size: 1.2em;
                 font-weight: 600;
@@ -98,7 +97,6 @@
         z-index: 2;
         animation: fadeInRight 0.8s ease-out 0.2s both;
 
-        // Decorative background
         &::before {
             content: '';
             position: absolute;
@@ -118,17 +116,14 @@
             max-width: 300px;
             object-fit: contain;
             border-radius: 20px;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.1),
-                0 10px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             position: relative;
             z-index: 2;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.1));
 
             &:hover {
-                box-shadow: 
-                    0 30px 60px rgba(0, 0, 0, 0.15),
-                    0 15px 30px rgba(0, 0, 0, 0.08);
+                transform: translateY(-4px) scale(1.02);
+                filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
             }
         }
     }
@@ -274,7 +269,6 @@
     }
 }
 
-// Additional enhancement for very small screens
 @media(max-width: 350px){
     .story-out-container{
         .story-left-container{
