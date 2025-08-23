@@ -45,7 +45,7 @@
             bottom: 0;
             background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
             clip-path: polygon(0 0, 10% 10%, 30% 0, 50% 20%, 70% 0, 90% 10%, 100% 0, 100% 100%, 0 100%); // Duplicate wavy effect
-            opacity: 0.5; // Slight transparency for a layered effect
+            opacity: 0.5;
         }
     }
 
@@ -68,7 +68,7 @@
             padding-top: 2rem;
             padding-bottom: 1rem;
             border-radius: 8px;
-            font-family: 'bantayogregular', sans-serif; // Apply font here
+            font-family: 'bantayogregular', sans-serif;
 
 
             h2 {
