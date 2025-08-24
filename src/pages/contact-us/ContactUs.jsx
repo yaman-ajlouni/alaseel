@@ -30,9 +30,6 @@ export const ContactUs = () => {
                         <div>+963 94 4236661</div>
                     </div>
                 </div>
-                {/* <div className='contact-third-container'>
-                f
-            </div> */}
             </div>
         </div>
     )
